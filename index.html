@@ -7,14 +7,15 @@
     <title>Luca UI</title>
 </head>
 <body>
-    <div id="app">{{message}}</div>
+    <div id="app">
+        <a-button></a-button>
+    </div>
     <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script src="./button.js"></script>
     <script>
         new Vue({
             el:'#app',
-            data:{
-                message:'hi'
-            }
+            
         })
     </script>
 </body>
