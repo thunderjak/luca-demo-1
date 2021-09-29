@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/thunderjak/luca-demo-1#readme",
   "dependencies": {
-    "vue": "^2.6.14",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue": "*",
+    "vue-class-component": "*",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-property-decorator": "^9.1.2"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
