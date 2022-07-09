@@ -1,6 +1,7 @@
 <template>
   <button class="a-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <a-icon v-if="icon" :name="icon"></a-icon>
+    <a-icon class="loading" name="add"></a-icon>
+    <a-icon class="icon" v-if="icon" :name="icon"></a-icon>
     <div class="content"><slot></slot></div>
   </button>
 </template>
@@ -44,6 +45,14 @@ export default {
   &:focus {
     outline: none;
   }
+  > .content {
+    order: 2;
+  }
+  > .icon {
+    order: 1;
+    margin-right: 0.1em;
+    margin-left: 0;
+  }
   &.icon-right {
     > .content {
       order: 1;
@@ -53,6 +62,17 @@ export default {
       margin-right: 0;
       margin-left: 0.1em;
     }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .loading {
+    animation: spin 2s infinite linear;
   }
 }
 </style>
